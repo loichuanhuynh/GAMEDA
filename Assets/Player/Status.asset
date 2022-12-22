@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8261b9a1a10d35246b40a33d1531798d, type: 3}
+  m_Name: Status
+  m_EditorClassIdentifier: 
+  STR: 10
+  VIT: 10
+  AGI: 10
+  DEX: 10
+  HP: 1000
+  HP_Max: 1000
+  Attack: 240
+  Defend_Physic: 100
+  Defend_Magic: 100
