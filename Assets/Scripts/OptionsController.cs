@@ -16,4 +16,9 @@ public class OptionsController : MonoBehaviour
         audio.Play();
         Debug.Log("Return");
     }
+
+    public void onFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
+    }
 }
