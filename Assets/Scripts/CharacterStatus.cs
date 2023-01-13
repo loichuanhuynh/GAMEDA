@@ -5,8 +5,10 @@ using UnityEngine;
 public class CharacterStatus : MonoBehaviour
 {
     public Status status;
-    Animator animator;
+    public Animator animator;
     public SpriteRenderer mainsword;
+    public InventoryScripTable inv;
+
 
     private void Start()
     {
@@ -35,15 +37,35 @@ public class CharacterStatus : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "WeaponItem")
+        if (collision.tag == "Drop Item")
         {
-            
+            ID id = collision.GetComponent<ID>();
             SpriteRenderer sworditem = collision.gameObject.GetComponent<SpriteRenderer>();
-            mainsword.sprite = sworditem.sprite;
-            status.Attack += 10;
-            collision.gameObject.SetActive(false);
+            Inventory t = new Inventory();
+            Caterory a;
+            if (id.id == 0)
+                a = inv.sword;
+            else if (id.id == 1)
+                a = inv.potion;
+            else if (id.id == 2)
+                a = inv.Shield;
+            else if (id.id == 3)
+                a = inv.Bow;
+            else a = inv.Armor;
+            for (int i = 0; i < a.items.Count; i++)
+            {
+                if (a.items[i].sprite == sworditem.sprite)
+                {
+                    t.id_id = i;
+                    t.sprite = sworditem.sprite;
+                    break;
+                }
+            }
+            t.id_caterory = id.id;
+            inv.inventory.Add(t);
+            Destroy(collision.gameObject);
         }
     }
 }

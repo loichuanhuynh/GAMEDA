@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class MainMenuController : MonoBehaviour
     public void onNewGame()
     {
         audio.Play();
-        Debug.Log("New Game");
+        SceneManager.LoadScene(2);
     }
 
     public void onLoadGame()
@@ -25,7 +26,7 @@ public class MainMenuController : MonoBehaviour
     public void onOptions()
     {
         audio.Play();
-        Debug.Log("Options");
+        SceneManager.LoadScene(1);
     }
     
     public void onExit()

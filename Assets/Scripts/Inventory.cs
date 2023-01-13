@@ -1,13 +1,13 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UI
+using System;
+using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
-////[CreateAssetMenu(fileName = "New Status", menuName = "Player/Status")]
-////public class Inventory : 
-////{
-////    public int STR;
-////    public int VIT;
-////    public int AGI;
-////    public int DEX;
-////}
+[Serializable]
+public class Inventory 
+{
+
+    public int id_caterory;
+    public int id_id;
+    public Sprite sprite;
+}

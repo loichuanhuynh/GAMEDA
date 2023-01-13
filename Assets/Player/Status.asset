@@ -16,8 +16,8 @@ MonoBehaviour:
   VIT: 10
   AGI: 10
   DEX: 10
-  HP: 1000
-  HP_Max: 1000
-  Attack: 240
+  HP: 9930
+  HP_Max: 10000
+  Attack: 210
   Defend_Physic: 100
   Defend_Magic: 100

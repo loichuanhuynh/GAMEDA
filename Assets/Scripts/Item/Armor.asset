@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a7d58233aa196448424c00d2e28250, type: 3}
+  m_Name: Armor
+  m_EditorClassIdentifier: 
+  id: 0
+  items:
+  - {fileID: 11400000, guid: 917076ddb6c47e54c9aa8c0e60b72b71, type: 2}
+  - {fileID: 11400000, guid: 5262627d90a80ba42acd418b0aa044f8, type: 2}
+  - {fileID: 11400000, guid: f8261618b18869e4cacfe66353bc29dd, type: 2}
+  - {fileID: 11400000, guid: 2b2c8e547790a5b4fb9576aa2bda6b10, type: 2}
+  - {fileID: 11400000, guid: cb861400f021cc84f8179b9173ab72e9, type: 2}
+  - {fileID: 11400000, guid: 12db9a8e7006ef44686d3ac644589a22, type: 2}
+  - {fileID: 11400000, guid: 185907c4af504004f8c81c9abe215d29, type: 2}
+  - {fileID: 11400000, guid: 80866f40d1665d248a43cd4b062e4c98, type: 2}
+  - {fileID: 11400000, guid: c13612d28ae4f8244a3111db91238a7f, type: 2}
+  - {fileID: 11400000, guid: 5787206c66062a14ea96c8e0370de8b4, type: 2}
+  gameItem: {fileID: 1843225435839904068, guid: 9d474ed823a578d4cb8fb2e90df5241b, type: 3}

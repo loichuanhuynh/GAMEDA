@@ -1677,7 +1677,6 @@ GameObject:
   - component: {fileID: 4899640887437455360}
   - component: {fileID: 2193499648378307162}
   - component: {fileID: 2269521574430898038}
-  - component: {fileID: 1440914534092330134}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -1694,7 +1693,7 @@ Transform:
   m_GameObject: {fileID: 4805264515051567396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4808488768437853228}
@@ -1707,7 +1706,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4899640887437455360
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1724,7 +1723,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!50 &2193499648378307162
 Rigidbody2D:
   serializedVersion: 4
@@ -1758,24 +1757,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36157c1394cf8c4f8c3121a398c8b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 2000
+  HP: 200
   Attack: 10
   a: {fileID: 0}
-  reward: {fileID: 0}
---- !u!114 &1440914534092330134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4805264515051567396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8840d6466e5b2864d9f6352c01591e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caterorysword: {fileID: 11400000, guid: a7fc95f7a8375a84c92792109daf45d1, type: 2}
-  cateroryPotion: {fileID: 11400000, guid: baa8f2ff0ea4f7841a76f47ef6538afd, type: 2}
+  player: {fileID: 11400000, guid: 35840672a73b563449466bd31e2508e7, type: 2}
 --- !u!1 &7095458361512464301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +1842,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 1.5
 --- !u!114 &2423993358337723954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1871,6 +1856,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 4805264515051567396}
+  isPause: 0
+  isTrigger: 0
+  isRight: 0
+  limitRadis: 2
 --- !u!1 &8270812983280101175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,7 +1908,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!114 &6736966361760428439
 MonoBehaviour:
   m_ObjectHideFlags: 0

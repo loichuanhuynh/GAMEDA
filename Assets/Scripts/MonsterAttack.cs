@@ -16,7 +16,7 @@ public class MonsterAttack : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            CharacterStatus player = collision.gameObject.GetComponentInParent<CharacterStatus>();
+           CharacterStatus player = collision.gameObject.GetComponentInParent<CharacterStatus>();
            player.IsDamge(statusMonter.Attack);
         }
     }

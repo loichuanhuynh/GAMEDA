@@ -37,11 +37,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802464095756288580, guid: a336d5b64be5b474084a95ca40ca8f91, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4802464095756288580, guid: a336d5b64be5b474084a95ca40ca8f91, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4802464095756288580, guid: a336d5b64be5b474084a95ca40ca8f91, type: 3}
       propertyPath: m_LocalPosition.x
@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4805264515051567396, guid: a336d5b64be5b474084a95ca40ca8f91, type: 3}
       propertyPath: m_Name
-      value: Goblin - 01
+      value: Goblin - 02 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a336d5b64be5b474084a95ca40ca8f91, type: 3}

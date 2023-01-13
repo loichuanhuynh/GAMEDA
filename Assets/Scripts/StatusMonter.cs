@@ -7,13 +7,12 @@ public class StatusMonter: MonoBehaviour
     public int HP = 1000;
     public int Attack = 100;
     public GameObject a;
-    public Reward reward;
     Animator animator;
+    public Status player;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        reward = GetComponent<Reward>();
     }
 
     public void IsDamge(int damge)
@@ -29,13 +28,15 @@ public class StatusMonter: MonoBehaviour
             animator.Play("Dying");
             StartCoroutine(InitialiseAttack());
             this.gameObject.SetActive(false);
-            reward.DropItem();
-            
+            player.Attack += 5;
+            player.HP_Max += 50;
+            player.HP += 50;
+            player.Defend_Physic += 50;
         }
     }
 
     IEnumerator InitialiseAttack()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
     }
 }

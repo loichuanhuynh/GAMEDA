@@ -7,20 +7,42 @@ public class AIMeleeCreep : MonoBehaviour
 {
     public GameObject monster;
     private Rigidbody2D r2d;
-    private bool is_jump;
+
+    Vector2 dir;
+    public bool isPause;
+    public bool isTrigger;
+    public bool isRight;
+    private float positionX;
+
+
+    public float limitRadis = 2f;
 
     private void Start()
     {
+        isRight = true;
+        isPause = false;
+        dir = Vector2.zero;
+        positionX = monster.transform.position.x;
         r2d = GetComponentInParent<Rigidbody2D>();
         r2d.freezeRotation = true;
-        is_jump = false;
+    }
+
+    private void Update()
+    {
+        
+        if ((Math.Abs(positionX - monster.transform.position.x) > limitRadis) && isTrigger)
+        {
+            isPause = true;
+        }
+        else isPause = false;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            Vector2 dir = new Vector2(1, 5);
+            isTrigger = true;
+            dir.x = 1;
             if (collision.transform.position.x < monster.transform.position.x)
             {
                 monster.transform.localScale = new Vector3(-monster.transform.localScale.y, monster.transform.localScale.y, monster.transform.localScale.z);
@@ -28,19 +50,57 @@ public class AIMeleeCreep : MonoBehaviour
             }
             else
                 monster.transform.localScale = new Vector3(monster.transform.localScale.y, monster.transform.localScale.y, monster.transform.localScale.z);
-            if (collision.transform.position.y < monster.transform.position.y)
-                dir.y = -5;
-            if (is_jump)
-                dir.y = -1;
-            r2d.velocity = dir;
+            
         }
-        if (collision.tag == "Ground")
-            is_jump = false;
+        else isTrigger = false;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void FixedUpdate()
     {
-        if (other.tag == "Ground")
-            is_jump = true;
+        if (!isPause)
+        {
+            if (isTrigger)
+            {
+                r2d.velocity = dir;
+                dir.x = 0;
+            }
+            else moveFreely();
+        }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+            isTrigger = false;
+
+    }
+
+    private void moveFreely()
+    {
+        if (positionX - limitRadis > monster.transform.position.x) 
+        {
+            isRight = true;
+            
+        }
+        else if (positionX + limitRadis < monster.transform.position.x)
+        {
+
+            isRight = false;
+            
+        }
+        
+        if (isRight)
+        {
+            dir.x = 1;
+            monster.transform.localScale = new Vector3(monster.transform.localScale.y, monster.transform.localScale.y, monster.transform.localScale.z);
+            r2d.velocity = dir; 
+        }
+        else
+        {
+            dir.x = -1;
+            r2d.velocity = dir;
+            monster.transform.localScale = new Vector3(-monster.transform.localScale.y, monster.transform.localScale.y, monster.transform.localScale.z);
+        }
+
+    }    
 }
