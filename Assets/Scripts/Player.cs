@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 [CreateAssetMenu]
@@ -14,14 +16,19 @@ public class Player: MonoBehaviour
     public InventoryScripTable inventoryScripTable;
     public List<Image> inv;
     public List<Image> equips;
-
+    public TextMeshProUGUI attack;
+    public TextMeshProUGUI HP;
+    public TextMeshProUGUI Armor;
+    public TextMeshProUGUI MP;
     public GameObject UI;
     bool isInv = false;
+    public Vector3 pos= Vector3.zero;
 
     private void Start()
     {
         fillInv();
-
+        GameObject character = Instantiate(player_Status.characters[player_Status.id]);
+        character.transform.position = pos;
     }
     private void Update()
     {
@@ -38,6 +45,10 @@ public class Player: MonoBehaviour
             UI.SetActive(false);
             fillInv();
         }
+        attack.text = "Attack: " + player_Status.Attack.ToString();
+        HP.text = "HP: " + player_Status.HP.ToString();
+        Armor.text = "Armor: " + player_Status.DEX.ToString();
+        MP.text = "MP: " + player_Status.Defend_Magic.ToString();
         
     }
 

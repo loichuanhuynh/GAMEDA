@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8261b9a1a10d35246b40a33d1531798d, type: 3}
   m_Name: Status
   m_EditorClassIdentifier: 
+  id: 1
   STR: 10
   VIT: 10
   AGI: 10
   DEX: 10
-  HP: 9930
-  HP_Max: 10000
-  Attack: 210
-  Defend_Physic: 100
+  HP: 1150
+  HP_Max: 1150
+  Attack: 235
+  Defend_Physic: 170
   Defend_Magic: 100
+  id_s: 3
+  characters:
+  - {fileID: 6229647545271228229, guid: 11ad992ceb97ec7448562803f65bfdf2, type: 3}
+  - {fileID: 1474692887488268275, guid: 254a6d574dbeb1642a6cd02dfcc3314d, type: 3}

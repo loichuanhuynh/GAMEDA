@@ -22,6 +22,7 @@ public class AIBossLv1 : MonoBehaviour
         polygon = GetComponent<PolygonCollider2D>();
         ModFly = false;
         rt = 0;
+        ra = 0;
         animator = GetComponent<Animator>();
     }
 

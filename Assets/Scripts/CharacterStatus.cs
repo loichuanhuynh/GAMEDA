@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CharacterStatus : MonoBehaviour
@@ -28,7 +29,9 @@ public class CharacterStatus : MonoBehaviour
         {
             animator.Play("Dying");
             StartCoroutine(InitialiseAttack());
-            this.gameObject.SetActive(false);
+            status.HP = status.HP_Max;
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
         }
     }
 
@@ -37,7 +40,7 @@ public class CharacterStatus : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Drop Item")
         {

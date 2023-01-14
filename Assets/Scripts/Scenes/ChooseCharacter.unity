@@ -1287,7 +1287,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 171582231}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042301661}
+        m_TargetAssemblyTypeName: Click, Assembly-CSharp
+        m_MethodName: click
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1602461595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,7 +1689,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 171582231}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042301661}
+        m_TargetAssemblyTypeName: Click, Assembly-CSharp
+        m_MethodName: click
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1825097499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,6 +1791,7 @@ GameObject:
   - component: {fileID: 2042301657}
   - component: {fileID: 2042301659}
   - component: {fileID: 2042301660}
+  - component: {fileID: 2042301661}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -1947,6 +1972,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2042301661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042301655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b506a771342262742af2c8a057eaf7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: {fileID: 11400000, guid: 35840672a73b563449466bd31e2508e7, type: 2}
 --- !u!1 &2054010884
 GameObject:
   m_ObjectHideFlags: 0

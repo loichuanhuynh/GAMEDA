@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 5073713804698125769}
   - component: {fileID: 5073713804698125768}
   - component: {fileID: 5073713804698125770}
+  - component: {fileID: 8380776663887449273}
   m_Layer: 0
   m_Name: Idle3
   m_TagString: Untagged
@@ -174,6 +175,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8380776663887449273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073713804698125773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36157c1394cf8c4f8c3121a398c8b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  Attack: 100
+  a: {fileID: 0}
+  player: {fileID: 11400000, guid: 35840672a73b563449466bd31e2508e7, type: 2}
 --- !u!1 &5882447923492381365
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,9 +201,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7602347652886520213}
   - component: {fileID: 3969860605563904433}
+  - component: {fileID: 9107985977615688770}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,4 +249,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!61 &9107985977615688770
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882447923492381365}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0

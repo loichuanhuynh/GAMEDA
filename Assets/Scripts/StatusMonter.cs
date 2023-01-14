@@ -17,7 +17,7 @@ public class StatusMonter: MonoBehaviour
 
     public void IsDamge(int damge)
     {
-        animator.Play("Hurt");
+        //animator.Play("Hurt");
         HP -= damge;
     }
 
@@ -25,7 +25,7 @@ public class StatusMonter: MonoBehaviour
     {
         if (HP < 0)
         {
-            animator.Play("Dying");
+            //animator.Play("Dying"); 
             StartCoroutine(InitialiseAttack());
             this.gameObject.SetActive(false);
             player.Attack += 5;

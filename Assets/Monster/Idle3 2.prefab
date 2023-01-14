@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3944739525736807557}
   - component: {fileID: 7505730827315805345}
+  - component: {fileID: 1340711352845448525}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +59,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!61 &1340711352845448525
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052952137191931813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!1 &1825930962474129629
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,6 +96,9 @@ GameObject:
   - component: {fileID: 1825930962474129625}
   - component: {fileID: 1825930962474129624}
   - component: {fileID: 1825930962474129626}
+  - component: {fileID: 2141991602676341417}
+  - component: {fileID: 7245912608207632351}
+  - component: {fileID: -4441211919013066822}
   m_Layer: 0
   m_Name: Idle3 2
   m_TagString: Untagged
@@ -165,6 +195,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2141991602676341417
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825930962474129629}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!114 &7245912608207632351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825930962474129629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23141c8f8ff6a5845b0ad0b0967c6045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 7984765300942286770, guid: 20da2117a32e3254ab70f746bc4c8c3c, type: 3}
+--- !u!114 &-4441211919013066822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825930962474129629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36157c1394cf8c4f8c3121a398c8b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  Attack: 100
+  a: {fileID: 0}
+  player: {fileID: 11400000, guid: 35840672a73b563449466bd31e2508e7, type: 2}
 --- !u!1 &1825930962678842018
 GameObject:
   m_ObjectHideFlags: 0

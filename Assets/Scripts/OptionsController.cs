@@ -22,7 +22,7 @@ public class OptionsController : MonoBehaviour
     public void onPlay()
     {
         audio.Play();
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void onFullScreen(bool isFullScreen)

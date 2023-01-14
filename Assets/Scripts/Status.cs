@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Status", menuName = "Player/Status")] 
 public class Status : ScriptableObject
 {
+    public int id;
     public int STR;
     public int VIT;
     public int AGI;
@@ -14,4 +15,6 @@ public class Status : ScriptableObject
     public int Attack;
     public int Defend_Physic;
     public int Defend_Magic;
+    public int id_s;
+    public List<GameObject> characters;
 }
